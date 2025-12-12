@@ -1,0 +1,59 @@
+   /* Navbar rounded container */
+    .custom-navbar {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 10px 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    /* Sidebar overlay */
+    .mobile-sidebar {
+      position: fixed;
+      top: 0;
+      left: -260px;
+      width: 260px;
+      height: 100%;
+      background: #ffffff;
+      box-shadow: 4px 0 20px rgba(0,0,0,0.2);
+      padding: 20px;
+      transition: all 0.35s ease-in-out;
+      z-index: 9999;
+    }
+    .mobile-sidebar.active {
+      left: 0;
+    }
+
+    /* Close button bulat */
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 42px;
+      height: 42px;
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: 0.25s ease;
+      z-index: 10000;
+    }
+    .close-btn:hover {
+      background: #333;
+    }
+
+    /* Overlay background */
+    .sidebar-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      display: none;
+      z-index: 9998;
+    }
+    .sidebar-overlay.active {
+      display: block;
+    }
