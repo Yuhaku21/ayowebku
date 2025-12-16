@@ -1,59 +1,167 @@
-   /* Navbar rounded container */
-    .custom-navbar {
-      background: #ffffff;
-      border-radius: 20px;
-      padding: 10px 20px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-    /* Sidebar overlay */
-    .mobile-sidebar {
-      position: fixed;
-      top: 0;
-      left: -260px;
-      width: 260px;
-      height: 100%;
-      background: #ffffff;
-      box-shadow: 4px 0 20px rgba(0,0,0,0.2);
-      padding: 20px;
-      transition: all 0.35s ease-in-out;
-      z-index: 9999;
-    }
-    .mobile-sidebar.active {
-      left: 0;
-    }
+body {
+  background: #ffffff;
+}
 
-    /* Close button bulat */
-    .close-btn {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      width: 42px;
-      height: 42px;
-      background: #111;
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      font-size: 22px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: 0.25s ease;
-      z-index: 10000;
-    }
-    .close-btn:hover {
-      background: #333;
-    }
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    /* Overlay background */
-    .sidebar-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.4);
-      display: none;
-      z-index: 9998;
-    }
-    .sidebar-overlay.active {
-      display: block;
-    }
+/* TEXT */
+.hero-content {
+  margin-top: -70px; /* naikkan teks */
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1f1f1f;
+  line-height: 1.3;
+}
+
+.hero-content span {
+  color: #7b2cff;
+}
+
+.hero-content p {
+  margin-top: 12px;
+  color: #666;
+}
+
+/* DOT CONTAINER */
+#dots {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* DOT */
+.dot {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(123, 44, 255, 0.35);
+  animation-name: float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(var(--x), var(--y));
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
+
+/* NAVBAR STYLE */
+.custom-navbar {
+  background:#fff;
+  border-radius:20px;
+  padding:14px 30px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* NAV LINK */
+.nav-link {
+  font-weight:500;
+  color:#333 !important;
+  margin:0 10px;
+}
+
+/* CONTACT BUTTON */
+.btn-contact {
+  background:#1f2328;
+  color:#fff;
+  border-radius:12px;
+  padding:8px 18px;
+  font-weight:500;
+}
+
+.btn-contact:hover {
+  background:#000;
+}
+
+/* OFFCANVAS */
+.offcanvas {
+  border-radius:0 20px 20px 0;
+}
+
+.offcanvas a {
+  font-size:1.1rem;
+  margin-bottom:12px;
+}
+
+/* HAMBURGER */
+.navbar-toggler {
+  border:none;
+}
+.navbar-toggler:focus {
+  box-shadow:none;
+}
+
+/* BUTTON HERO */
+.btn-purple {
+  background: #7b2cff;
+  color: #fff;
+  
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-purple:hover {
+  background: #651ed6;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(123, 44, 255, 0.3);
+}
+
+.btn-outline-purple {
+  background: transparent;
+  color: #7b2cff;
+  border: 2px solid #7b2cff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-purple:hover {
+  background: #7b2cff;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(123, 44, 255, 0.3);
+}
+
+@media (max-width: 576px) {
+  .btn-purple,
+  .btn-outline-purple {
+    font-size: 0.85rem;     /* perkecil teks */
+    padding: 8px 14px;     /* perkecil tombol */
+  }
+}

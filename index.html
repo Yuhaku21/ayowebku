@@ -1,53 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
   <meta charset="UTF-8">
-  <title>Ayowebku Prototype</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Polkadot Ayowebku</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!--Style-->
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <div class="container mt-4">
+    <nav class="navbar navbar-expand-lg custom-navbar">
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="/asset/logoweb.png" alt="" width="150px">
+      </a>
 
-<!-- SIDEBAR MOBILE -->
-<div class="mobile-sidebar" id="mobileSidebar">
+      <!-- HAMBURGER -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <!-- CLOSE BUTTON -->
-  <button class="close-btn" id="closeSidebar">✕</button>
-
-  <!-- Menu (turun sedikit agar tidak menabrak tombol close) -->
-  <a href="#" class="d-block mb-3 fs-5 mt-5">Home</a>
-  <a href="#" class="d-block mb-3 fs-5">Service</a>
-  <a href="#" class="d-block mb-3 fs-5">Gallery</a>
-
-  <a href="#" class="btn btn-dark w-100 mt-4">Booking Now</a>
-</div>
-
-<div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg custom-navbar mt-3 mx-2 mx-md-4">
-  <a class="navbar-brand fw-bold" href="#">
-    <img src="logo.png" alt="Logo" width="40" class="me-2"> Arya Taxi
-  </a>
-
-  <!-- Hamburger -->
-  <button class="navbar-toggler border-0" type="button" id="openSidebar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse justify-content-end">
-    <ul class="navbar-nav mb-2 mb-lg-0 gap-4">
-      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
-    </ul>
-    <a href="#" class="btn btn-dark ms-3 px-4">Booking Now</a>
+      <!-- DESKTOP MENU -->
+      <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Location</a></li>
+          <li class="nav-item ms-3">
+            <a href="#" class="btn btn-contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
-</nav>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- OFFCANVAS SIDEBAR -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header">
+      <h5 class="fw-bold">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <a href="#" class="nav-link">Home</a>
+      <a href="#" class="nav-link">About</a>
+      <a href="#" class="nav-link">Gallery</a>
+      <a href="#" class="nav-link">Location</a>
+
+      <a href="#" class="btn btn-contact mt-3">Contact Us</a>
+    </div>
+  </div>
+  <!--SectionHero-->
+  <section class="hero">
+    <div id="dots"></div>
+    <div class="hero-content">
+      <h1>
+        Solusinya Website UMKM Murah dan Profesional di
+        <span>Ayowebku</span>
+      </h1>
+      <p>Solusi digital modern untuk UMKM Indonesia</p>
+      <div class="container text-center">
+        <div class="d-flex justify-content-center gap-3 flex-nowrap">
+          <a href="#" class="btn btn-outline-purple px-4 py-2">
+            Konsultasi Gratis ✨
+          </a>
+          <a href="#" class="btn btn-purple px-4 py-2">
+            Mulai dari Rp.270k 🚀
+          </a>
+        </div>
+      </div>
+      <div class="container">
+        <p>Technology by</p>
+        <img src="/asset/Group 20.jpg" alt="" width="100%">
+      </div>
+    </div>
+  </section>
+  <!--SectionAbout-->
+  <div class="about" style="background-color: rgba(134, 4, 134, 0.324);padding: 20px;">
+
+  </div>
+  <script src="main.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
