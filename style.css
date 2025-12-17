@@ -37,7 +37,7 @@ body {
 }
 
 .hero-content span {
-  color: #7b2cff;
+  color: #7C4585;
 }
 
 .hero-content p {
@@ -130,7 +130,7 @@ body {
 
 /* BUTTON HERO */
 .btn-purple {
-  background: #7b2cff;
+  background: #7C4585;
   color: #fff;
   
   font-weight: 600;
@@ -145,8 +145,8 @@ body {
 
 .btn-outline-purple {
   background: transparent;
-  color: #7b2cff;
-  border: 2px solid #7b2cff;
+  color: #7C4585;
+  border: 2px solid #7C4585;
   font-weight: 600;
   transition: all 0.3s ease;
 }
@@ -165,3 +165,25 @@ body {
     padding: 8px 14px;     /* perkecil tombol */
   }
 }
+
+.about h2 span {
+  color: #7b2cff;
+}
+
+.about p {
+  color: #333;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* RESPONSIVE: HIDE IMAGE ON MOBILE */
+@media (max-width: 768px) {
+  .about-image {
+    display: none;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+}
+
