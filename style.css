@@ -21,7 +21,7 @@ body {
 
 /* TEXT */
 .hero-content {
-  margin-top: -70px; /* naikkan teks */
+  margin-top: -80px;
   position: relative;
   z-index: 2;
   text-align: center;
@@ -99,7 +99,7 @@ body {
 
 /* CONTACT BUTTON */
 .btn-contact {
-  background:#1f2328;
+  background:#7C4585;
   color:#fff;
   border-radius:12px;
   padding:8px 18px;
@@ -107,7 +107,8 @@ body {
 }
 
 .btn-contact:hover {
-  background:#000;
+  background:white;
+  border: 2px solid #7C4585;
 }
 
 /* OFFCANVAS */
