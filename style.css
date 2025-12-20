@@ -188,3 +188,112 @@ body {
   }
 }
 
+.badge {
+        display: inline-block;
+        background-color: #7e458531;
+        color: #7C4585;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 6px 12px;
+        border-radius: 8px;
+        border: 1px solid #7C4585;
+        font-family: Arial, sans-serif;
+      }
+
+       .section-keunggulan {
+      padding: 60px 0;
+      background-color: #ffffff;
+    }
+
+    .keunggulan-card {
+      border-radius: 16px;
+      padding: 24px;
+      background: #fff;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      height: 100%;
+      transition: 0.3s ease;
+    }
+
+    .keunggulan-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .keunggulan-card h5 {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .keunggulan-card p {
+      margin-bottom: 0;
+      color: #555;
+      font-size: 15px;
+    }
+
+    .icon {
+      font-size: 22px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+     .pricing-section {
+      padding: 60px 0;
+    }
+
+    .pricing-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 30px 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      height: 100%;
+      text-align: center;
+    }
+
+    .pricing-card h5 {
+      font-weight: 600;
+      margin-top: 15px;
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .pricing-card ul {
+      text-align: left;
+      padding-left: 0;
+      list-style: none;
+      font-size: 14px;
+    }
+
+    .pricing-card ul li {
+      margin-bottom: 8px;
+    }
+
+    .btn-purple {
+      background: #7C4585;
+      color: #fff;
+      border-radius: 10px;
+      padding: 10px 20px;
+    }
+
+    .btn-purple:hover {
+      background: #6a3a72;
+      color: #fff;
+    }
+
+    /* Desktop: tampil 3 card tanpa geser */
+    @media (min-width: 992px) {
+      .carousel-inner {
+        display: flex;
+      }
+      .carousel-item {
+        display: block;
+        margin-right: 0;
+        flex: 0 0 calc(100% / 3);
+      }
+      .carousel-control-prev,
+      .carousel-control-next {
+        display: none;
+      }
+    }
