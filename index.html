@@ -15,17 +15,17 @@
 
 <body>
   <!-- SPLASH SCREEN -->
-<div class="splash" id="splash">
-  <img src="/asset/logoweb.png" class="logo" alt="Logo">
-  <h1 style="color: #7C4585;"><b>Ayowebku</b></h1>
-  <p class="text-center">Bantu Digitalisasi UMKM Bersama Ayowebku✨</p>
+  <div class="splash" id="splash">
+    <img src="/asset/logoweb.png" class="logo" alt="Logo">
+    <h1 style="color: #7C4585;"><b>Ayowebku</b></h1>
+    <p class="text-center">Bantu Digitalisasi UMKM Bersama Ayowebku✨</p>
 
-  <div class="progress-wrapper">
-    <div class="progress-bar" id="progressBar"></div>
+    <div class="progress-wrapper">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="progress-text" id="progressText">Loading 0%</div>
   </div>
-
-  <div class="progress-text" id="progressText">Loading 0%</div>
-</div>
 
   <div class="container mt-4">
     <nav class="navbar navbar-expand-lg custom-navbar">
@@ -41,10 +41,39 @@
       <!-- DESKTOP MENU -->
       <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
         <ul class="navbar-nav align-items-center">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Location</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Beranda</a></li>
+          <li class="nav-item">
+             <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Jasa Website
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/Jasa Website/jasa-website-sekolah.html">Jasa Website Sekolah</a></li>
+          <li><a class="dropdown-item" href="">Jasa Website Travel</a></li>
+          <li><a class="dropdown-item" href="#">Jasa Website Toko Online</a></li>
+          <li><a class="dropdown-item" href="#">Jasa Website Company</a></li>
+          <li><a class="dropdown-item" href="#">Jasa Website Rental</a></li>
+        </ul>
+      </div>
+          </li>
+          <li class="nav-item">
+              <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Jasa Lainnya
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/Jasa Website/jasa-website-sekolah.html">Jasa Pembuatan Mobile Apps</a></li>
+          <li><a class="dropdown-item" href="">Template Excel Tools</a></li>
+          <li><a class="dropdown-item" href="#">Jasa Design Poster</a></li>
+          <li><a class="dropdown-item" href="#">Jasa Pembuatan Aplikasi Kasir</a></li>
+          <li><a class="dropdown-item" href="#">Jasa Kelola Sosial Media</a></li>
+          <li><a class="dropdown-item" href="#">Jasa Maintenance Website</a></li>
+          <li><a class="dropdown-item" href="#">Jasa Design Logo</a></li>
+        </ul>
+      </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Ayosite</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Portofolio</a></li>
           <li class="nav-item ms-3">
             <a href="#" class="btn btn-contact">Contact Us</a>
           </li>
@@ -52,7 +81,6 @@
       </div>
     </nav>
   </div>
-
   <!-- OFFCANVAS SIDEBAR -->
   <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
     <div class="offcanvas-header">
@@ -60,7 +88,7 @@
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
     </div>
     <div class="offcanvas-body d-flex flex-column">
-      <a href="#" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Beranda</a>
       <div class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Jasa Website
@@ -69,15 +97,31 @@
           <li><a class="dropdown-item" href="/Jasa Website/jasa-website-sekolah.html">Jasa Website Sekolah</a></li>
           <li><a class="dropdown-item" href="">Jasa Website Travel</a></li>
           <li><a class="dropdown-item" href="#">Jasa Website Toko Online</a></li>
-          <li><a class="dropdown-item" href="#">Jasa Website Penyewaan</a></li>
+          <li><a class="dropdown-item" href="#">Jasa Website Company</a></li>
+          <li><a class="dropdown-item" href="#">Jasa Website Rental</a></li>
         </ul>
       </div>
-      <a href="#" class="nav-link">Gallery</a>
-      <a href="#" class="nav-link">Location</a>
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Jasa Lainnya
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/Jasa Website/jasa-website-sekolah.html">Jasa Pembuatan Mobile Apps</a></li>
+          <li><a class="dropdown-item" href="">Template Excel Tools</a></li>
+          <li><a class="dropdown-item" href="#">Jasa Design Poster</a></li>
+          <li><a class="dropdown-item" href="#">Jasa Pembuatan Aplikasi Kasir</a></li>
+          <li><a class="dropdown-item" href="#">Jasa Kelola Sosial Media</a></li>
+          <li><a class="dropdown-item" href="#">Jasa Maintenance Website</a></li>
+          <li><a class="dropdown-item" href="#">Jasa Design Logo</a></li>
+        </ul>
+      </div>
+      <a href="#" class="nav-link">Ayosite</a>
+      <a href="#" class="nav-link">Portofolio</a>
 
       <a href="#" class="btn btn-contact mt-3">Contact Us</a>
     </div>
   </div>
+
   <!--SectionHero-->
   <section class="hero">
     <div id="dots"></div>
