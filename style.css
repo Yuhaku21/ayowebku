@@ -395,3 +395,17 @@ body {
 .footer h4 {
   letter-spacing: 1px;
 }
+
+.whatsapp-float-text {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 50px;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,.2);
+  z-index: 9999;
+}
