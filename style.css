@@ -67,9 +67,11 @@ body {
   0% {
     transform: translate(0, 0);
   }
+
   50% {
     transform: translate(var(--x), var(--y));
   }
+
   100% {
     transform: translate(0, 0);
   }
@@ -84,56 +86,57 @@ body {
 
 /* NAVBAR STYLE */
 .custom-navbar {
-  background:#fff;
-  border-radius:20px;
-  padding:14px 30px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  background: #fff;
+  border-radius: 20px;
+  padding: 14px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 /* NAV LINK */
 .nav-link {
-  font-weight:500;
-  color:#333 !important;
-  margin:0 10px;
+  font-weight: 500;
+  color: #333 !important;
+  margin: 0 10px;
 }
 
 /* CONTACT BUTTON */
 .btn-contact {
-  background:#7C4585;
-  color:#fff;
-  border-radius:12px;
-  padding:8px 18px;
-  font-weight:500;
+  background: #7C4585;
+  color: #fff;
+  border-radius: 12px;
+  padding: 8px 18px;
+  font-weight: 500;
 }
 
 .btn-contact:hover {
-  background:white;
+  background: white;
   border: 2px solid #7C4585;
 }
 
 /* OFFCANVAS */
 .offcanvas {
-  border-radius:0 20px 20px 0;
+  border-radius: 0 20px 20px 0;
 }
 
 .offcanvas a {
-  font-size:1.1rem;
-  margin-bottom:12px;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
 }
 
 /* HAMBURGER */
 .navbar-toggler {
-  border:none;
+  border: none;
 }
+
 .navbar-toggler:focus {
-  box-shadow:none;
+  box-shadow: none;
 }
 
 /* BUTTON HERO */
 .btn-purple {
   background: #7C4585;
   color: #fff;
-  
+
   font-weight: 600;
   transition: all 0.3s ease;
 }
@@ -160,10 +163,13 @@ body {
 }
 
 @media (max-width: 576px) {
+
   .btn-purple,
   .btn-outline-purple {
-    font-size: 0.85rem;     /* perkecil teks */
-    padding: 8px 14px;     /* perkecil tombol */
+    font-size: 0.85rem;
+    /* perkecil teks */
+    padding: 8px 14px;
+    /* perkecil tombol */
   }
 }
 
@@ -189,183 +195,203 @@ body {
 }
 
 .badge {
-        display: inline-block;
-        background-color: #7e458531;
-        color: #7C4585;
-        font-size: 14px;
-        font-weight: 500;
-        padding: 6px 12px;
-        border-radius: 8px;
-        border: 1px solid #7C4585;
-        font-family: Arial, sans-serif;
-      }
+  display: inline-block;
+  background-color: #7e458531;
+  color: #7C4585;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #7C4585;
+  font-family: Arial, sans-serif;
+}
 
-       .section-keunggulan {
-      padding: 60px 0;
-      background-color: #ffffff;
-    }
+.section-keunggulan {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
 
-    .keunggulan-card {
-      border-radius: 16px;
-      padding: 24px;
-      background: #fff;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-      height: 100%;
-      transition: 0.3s ease;
-    }
+.keunggulan-card {
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  transition: 0.3s ease;
+}
 
-    .keunggulan-card:hover {
-      transform: translateY(-5px);
-    }
+.keunggulan-card:hover {
+  transform: translateY(-5px);
+}
 
-    .keunggulan-card h5 {
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
+.keunggulan-card h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
 
-    .keunggulan-card p {
-      margin-bottom: 0;
-      color: #555;
-      font-size: 15px;
-    }
+.keunggulan-card p {
+  margin-bottom: 0;
+  color: #555;
+  font-size: 15px;
+}
 
-    .icon {
-      font-size: 22px;
-      margin-bottom: 10px;
-      display: inline-block;
-    }
+.icon {
+  font-size: 22px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
 
-     .pricing-section {
-      padding: 60px 0;
-    }
+.pricing-section {
+  padding: 60px 0;
+}
 
-    .pricing-card {
-      background: #fff;
-      border-radius: 18px;
-      padding: 30px 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      height: 100%;
-      text-align: center;
-    }
+.pricing-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  text-align: center;
+}
 
-    .pricing-card h5 {
-      font-weight: 600;
-      margin-top: 15px;
-    }
+.pricing-card h5 {
+  font-weight: 600;
+  margin-top: 15px;
+}
 
-    .price {
-      font-size: 22px;
-      font-weight: bold;
-      margin: 15px 0;
-    }
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 15px 0;
+}
 
-    .pricing-card ul {
-      text-align: left;
-      padding-left: 0;
-      list-style: none;
-      font-size: 14px;
-    }
+.pricing-card ul {
+  text-align: left;
+  padding-left: 0;
+  list-style: none;
+  font-size: 14px;
+}
 
-    .pricing-card ul li {
-      margin-bottom: 8px;
-    }
+.pricing-card ul li {
+  margin-bottom: 8px;
+}
 
-    .btn-purple {
-      background: #7C4585;
-      color: #fff;
-      border-radius: 10px;
-      padding: 10px 20px;
-    }
+.btn-purple {
+  background: #7C4585;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
 
-    .btn-purple:hover {
-      background: #6a3a72;
-      color: #fff;
-    }
+.btn-purple:hover {
+  background: #6a3a72;
+  color: #fff;
+}
 
-    /* Desktop: tampil 3 card tanpa geser */
-    @media (min-width: 992px) {
-      .carousel-inner {
-        display: flex;
-      }
-      .carousel-item {
-        display: block;
-        margin-right: 0;
-        flex: 0 0 calc(100% / 3);
-      }
-      .carousel-control-prev,
-      .carousel-control-next {
-        display: none;
-      }
-    }
-    
-    .poster-section {
-      padding: 60px 0;
-    }
+/* Desktop: tampil 3 card tanpa geser */
+@media (min-width: 992px) {
+  .carousel-inner {
+    display: flex;
+  }
 
-    .poster-card {
-      background: #fff;
-      border-radius: 18px;
-      padding: 30px 22px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      text-align: center;
-      height: 100%;
-      transition: 0.3s;
-    }
+  .carousel-item {
+    display: block;
+    margin-right: 0;
+    flex: 0 0 calc(100% / 3);
+  }
 
-    .poster-card:hover {
-      transform: translateY(-6px);
-    }
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+}
 
-    .poster-card h5 {
-      font-weight: 600;
-      margin-top: 15px;
-    }
+.poster-section {
+  padding: 60px 0;
+}
 
-    .poster-price {
-      font-size: 22px;
-      font-weight: bold;
-      margin: 15px 0;
-      color: #7C4585;
-    }
+.poster-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px 22px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 100%;
+  transition: 0.3s;
+}
 
-    .poster-card ul {
-      list-style: none;
-      padding-left: 0;
-      text-align: left;
-      font-size: 14px;
-    }
+.poster-card:hover {
+  transform: translateY(-6px);
+}
 
-    .poster-card ul li {
-      margin-bottom: 8px;
-    }
+.poster-card h5 {
+  font-weight: 600;
+  margin-top: 15px;
+}
 
-    .btn-purple {
-      background: #7C4585;
-      color: #fff;
-      border-radius: 10px;
-      padding: 10px 20px;
-    }
+.poster-price {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 15px 0;
+  color: #7C4585;
+}
 
-    .btn-purple:hover {
-      background: #6a3a72;
-      color: #fff;
-    }
+.poster-card ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+  font-size: 14px;
+}
 
-    /* Desktop: tampil 3 card sejajar */
-    @media (min-width: 992px) {
-      .carousel-inner {
-        display: flex;
-      }
-      .carousel-item {
-        display: block;
-        flex: 0 0 calc(100% / 3);
-      }
-      .carousel-control-prev,
-      .carousel-control-next {
-        display: none;
-      }
-    }
+.poster-card ul li {
+  margin-bottom: 8px;
+}
 
-    .carousel-item {
-      transition: transform 0.6s ease-in-out;
-    }
+.btn-purple {
+  background: #7C4585;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.btn-purple:hover {
+  background: #6a3a72;
+  color: #fff;
+}
+
+/* Desktop: tampil 3 card sejajar */
+@media (min-width: 992px) {
+  .carousel-inner {
+    display: flex;
+  }
+
+  .carousel-item {
+    display: block;
+    flex: 0 0 calc(100% / 3);
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+}
+
+.carousel-item {
+  transition: transform 0.6s ease-in-out;
+}
+
+.footer-link,
+.footer-social {
+  color: #adb5bd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-link:hover,
+.footer-social:hover {
+  color: #ffffff;
+}
+
+.footer h4 {
+  letter-spacing: 1px;
+}
