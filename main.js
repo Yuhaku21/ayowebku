@@ -25,3 +25,22 @@ for (let i = 0; i < DOT_COUNT; i++) {
 
   dotsContainer.appendChild(dot);
 }
+
+  let progress = 0;
+  const splash = document.getElementById("splash");
+  const bar = document.getElementById("progressBar");
+  const text = document.getElementById("progressText");
+
+  const loading = setInterval(() => {
+    progress++;
+    bar.style.width = progress + "%";
+    text.textContent = "Loading " + progress + "%";
+
+    if (progress >= 100) {
+      clearInterval(loading);
+
+      setTimeout(() => {
+        splash.classList.add("fade-out");
+      }, 300);
+    }
+  }, 30); // ±3 detik
