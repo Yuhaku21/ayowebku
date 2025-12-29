@@ -456,3 +456,46 @@ body {
   margin-top: 8px;
   font-size: 14px;
 }
+
+#penawaran-terbaik {
+  background: linear-gradient(135deg, #f7f2fb, #ffffff);
+}
+
+.pricing-card {
+  border-radius: 18px;
+  transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+}
+
+.price {
+  font-weight: 800;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #7C4585, #b56dc5);
+  border-radius: 20px;
+  position: relative;
+  transform: scale(1.05);
+}
+
+.badge-best {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffc107;
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .highlight {
+    transform: scale(1);
+  }
+}
