@@ -18,15 +18,22 @@
 <body>
   <!-- SPLASH SCREEN -->
   <div class="splash" id="splash">
-    <img src="./asset/logoweb.png" class="logo" alt="Logo">
-    <h1 style="color: #7C4585;"><b>Ayowebku</b></h1>
-    <p class="text-center">Bantu Digitalisasi UMKM Bersama Ayowebku✨</p>
+    <div class="splash-inner">
+      <div class="splash-brand">
+        <h1 class="text-center"><b>Ayowebku</b></h1>
+        <p class="text-center">Bantu Digitalisasi UMKM Bersama Ayowebku ✨</p>
+      </div>
 
-    <div class="progress-wrapper">
-      <div class="progress-bar" id="progressBar"></div>
+      <div class="splash-loader">
+        <div class="splash-spinner" aria-hidden="true"></div>
+
+        <div class="progress-wrapper">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div class="progress-text" id="progressText">Loading 0%</div>
+      </div>
     </div>
-
-    <div class="progress-text" id="progressText">Loading 0%</div>
   </div>
 
   <div class="container mt-4">
@@ -160,7 +167,7 @@
     </div>
   </section>
   <!-- Domain Checker -->
-  <section class="domain-checker py-5">
+  <section class="domain-checker mb-5">
     <div class="container">
       <div class="card p-4 shadow-sm">
         <h4 class="mb-2 text-center"><b>Temukan Nama Domain Terbaik untuk Bisnis Anda</b></h4>
@@ -183,7 +190,7 @@
             <span class="tld-label">.biz.id</span>
           </div>
 
-          <button id="checkDomainBtn" class="btn btn-purple">Cek Domain</button>
+          <button id="checkDomainBtn" class="btn btn-purple">Cek Domain 🔎</button>
         </div>
 
         <div id="domainResults" class="mt-3"></div>
@@ -279,92 +286,82 @@
     <section class="pricing-section">
       <div class="container">
         <div class="text-center mb-5">
-          <span class="badge mb-3">
-            Harga Terbaik
-          </span>
-          <h2 class="fw-bold"  data-aos="zoom-in"  data-aos="zoom-in">Ayowebku Digital Growth Package </h2>
-          <p>Dengan paket ini, kamu tidak cuma punya website, tapi juga akun sosial media yang aktif dan terkelola
-            dengan baik.</p>
+          <span class="badge mb-3">Harga Terbaik</span>
+          <h2 class="fw-bold" data-aos="zoom-in">Ayowebku Digital Growth Package</h2>
+          <p>Dengan paket ini, kamu tidak cuma punya website, tapi juga akun sosial media yang aktif dan terkelola dengan baik.</p>
         </div>
-        <div id="pricingCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500"
-          data-bs-pause="hover" data-bs-touch="true">
-          <div class="carousel-inner">
 
-            <!-- Bronze -->
-            <div class="carousel-item active">
-              <div class="pricing-card mx-2">
-                <img src="https://cdn-icons-png.flaticon.com/512/2583/2583344.png" width="60">
+        <div class="product-cards row g-4 align-items-stretch">
+
+          <div class="col-md-6 col-lg-4">
+            <div class="product-card">
+              <div class="card-top">
+                <div class="card-icon" style="background: linear-gradient(135deg,#ffd66b,#ff9a3c);">
+                  <img src="https://cdn-icons-png.flaticon.com/512/2583/2583344.png" alt="Bronze" width="36">
+                </div>
                 <h5>Paket Bronze</h5>
-                <div class="price">Rp.550k/bln</div>
-                <ul>
-                  <li>✅ Tampilan Website Premium</li>
-                  <li>✅ Desain Responsif & Mobile-Friendly</li>
-                  <li>✅ Gratis Domain & Hosting</li>
-                  <li>✅ Optimasi SEO</li>
-                  <li>✅ Free Ide Konten</li>
-                  <li>✅ Free Caption dan Hashtag</li>
-                  <li>✅ 4 Konten Feed</li>
-                </ul>
-                <a href="https://wa.me/6283192124659?text=Halo%20kak%20saya%20ingin%20memesan%20Jasa%20paketan%20Ayowebku%20Digital%20Growt%20untuk%20paket%20Bronze%20nya%20%F0%9F%98%8A"
-                  class="btn btn-purple mt-3">Pesan Sekarang</a>
+                <div class="price">Rp.550k<span class="price-unit">/bln</span></div>
+              </div>
+
+              <ul class="features">
+                <li>Desain responsif & mobile-friendly</li>
+                <li>Gratis domain & hosting</li>
+                <li>Optimasi SEO dasar</li>
+                <li>4 konten feed + caption</li>
+              </ul>
+
+              <div class="card-footer">
+                <a href="https://wa.me/6283192124659?text=Halo%20saya%20ingin%20memesan%20Paket%20Bronze" class="btn btn-order">Pesan Sekarang</a>
               </div>
             </div>
-
-            <!-- Silver -->
-            <div class="carousel-item">
-              <div class="pricing-card mx-2">
-                <img src="https://cdn-icons-png.flaticon.com/512/2583/2583314.png" width="60">
-                <h5>Paket Silver</h5>
-                <div class="price">Rp.950k/bln</div>
-                <ul>
-                  <li>✅ Tampilan Website Premium</li>
-                  <li>✅ Desain Responsif & Mobile-Friendly</li>
-                  <li>✅ Gratis Domain & Hosting .com</li>
-                  <li>✅ Optimasi SEO</li>
-                  <li>✅ Free Ide Konten</li>
-                  <li>✅ Free Caption dan Hashtag</li>
-                  <li>✅ 8 Konten Feed</li>
-                  <li>✅ 2 Video Reels</li>
-                  <li>✅ Free Revisi 6x</li>
-                </ul>
-                <a href="https://wa.me/6283192124659?text=Halo%20kak%20saya%20ingin%20memesan%20Jasa%20paketan%20Ayowebku%20Digital%20Growt%20untuk%20paket%20Bronze%20nya%20%F0%9F%98%8A"
-                  class="btn btn-purple mt-3">Pesan Sekarang</a>
-              </div>
-            </div>
-
-            <!-- Gold -->
-            <div class="carousel-item">
-              <div class="pricing-card mx-2">
-                <img src="https://cdn-icons-png.flaticon.com/512/2583/2583323.png" width="60">
-                <h5>Paket Gold</h5>
-                <div class="price">Rp.1.600k/thn</div>
-                <ul>
-                  <li>✅ Tampilan Website Premium</li>
-                  <li>✅ Desain Responsif & Mobile-Friendly</li>
-                  <li>✅ Gratis Domain & Hosting .com</li>
-                  <li>✅ Optimasi SEO</li>
-                  <li>✅ Free Ide Konten</li>
-                  <li>✅ Free Caption dan Hashtag</li>
-                  <li>✅ 14 Konten Feed</li>
-                  <li>✅ 6 Video Reels</li>
-                  <li>✅ Unlimited Revisi</li>
-                  <li>✅ Report Bulanan (Analisa & Strategi)</li>
-                </ul>
-                <a href="https://wa.me/6283192124659?text=Halo%20kak%20saya%20ingin%20memesan%20Jasa%20paketan%20Ayowebku%20Digital%20Growt%20untuk%20paket%20Gold%20nya%20%F0%9F%98%8A"
-                  class="btn btn-purple mt-3">Pesan Sekarang</a>
-              </div>
-            </div>
-
           </div>
 
-          <!-- Control (mobile) -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#pricingCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </button>
+          <div class="col-md-6 col-lg-4">
+            <div class="product-card highlight">
+              <div class="badge-recommended">Rekomendasi</div>
+              <div class="card-top">
+                <div class="card-icon" style="background: linear-gradient(135deg,#8a4bb3,#7C4585);">
+                  <img src="https://cdn-icons-png.flaticon.com/512/2583/2583314.png" alt="Silver" width="36">
+                </div>
+                <h5>Paket Silver</h5>
+                <div class="price">Rp.950k<span class="price-unit">/bln</span></div>
+              </div>
 
-          <button class="carousel-control-next" type="button" data-bs-target="#pricingCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </button>
+              <ul class="features">
+                <li>Semua fitur Bronze</li>
+                <li>8 konten feed + 2 video reels</li>
+                <li>Gratis domain .com</li>
+                <li>Free revisi 6x</li>
+              </ul>
+
+              <div class="card-footer">
+                <a href="https://wa.me/6283192124659?text=Halo%20saya%20ingin%20memesan%20Paket%20Silver" class="btn btn-order btn-order-light">Pesan Sekarang</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="product-card">
+              <div class="card-top">
+                <div class="card-icon" style="background: linear-gradient(135deg,#ffd7a6,#ffb48a);">
+                  <img src="https://cdn-icons-png.flaticon.com/512/2583/2583323.png" alt="Gold" width="36">
+                </div>
+                <h5>Paket Gold</h5>
+                <div class="price">Rp.1.600k<span class="price-unit">/thn</span></div>
+              </div>
+
+              <ul class="features">
+                <li>Semua fitur Silver</li>
+                <li>14 konten feed + 6 video reels</li>
+                <li>Unlimited revisi</li>
+                <li>Report bulanan & strategi</li>
+              </ul>
+
+              <div class="card-footer">
+                <a href="https://wa.me/6283192124659?text=Halo%20saya%20ingin%20memesan%20Paket%20Gold" class="btn btn-order">Pesan Sekarang</a>
+              </div>
+            </div>
+          </div>
 
         </div>
 
@@ -385,7 +382,7 @@
       </a>
     </div>
   </div>
-  <!-- Section Jasa Ayosite-->
+  <!-- Section Jasa Design Poster-->
   <div class="card-jasa-design" style="background-color: rgba(134, 4, 134, 0.324); padding: 40px 0;">
     <section class="poster-section">
       <div class="container">
@@ -395,75 +392,78 @@
           <p class="text-muted">Cocok untuk promosi bisnis, event, dan media sosial</p>
         </div>
 
-        <div id="posterCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"
-          data-bs-pause="hover" data-bs-touch="true">
+        <div class="product-cards row g-4 align-items-stretch">
 
-          <div class="carousel-inner">
-
-            <!-- BASIC -->
-            <div class="carousel-item active">
-              <div class="poster-card mx-2">
-                <img src="https://cdn-icons-png.flaticon.com/512/1829/1829586.png" width="55">
+          <div class="col-md-6 col-lg-4">
+            <div class="product-card">
+              <div class="card-top">
+                <div class="card-icon" style="background: linear-gradient(135deg,#6ad1ff,#3ab0ff);">
+                  <img src="https://cdn-icons-png.flaticon.com/512/1829/1829586.png" alt="Basic" width="36">
+                </div>
                 <h5>Paket Basic</h5>
-                <div class="poster-price">Rp.50.000</div>
-                <ul>
-                  <li>• 1 desain poster</li>
-                  <li>• Ukuran custom</li>
-                  <li>• Revisi 1x</li>
-                  <li>• File JPG / PNG</li>
-                  <li>• Estimasi 1 hari</li>
-                </ul>
-                <a href="https://wa.me/6283192124659?text=Halo%20kak%20saya%20ingin%20memesan%20Jasa%20paketan%20Ayowebku%20Digital%20Growth%20untuk%20paket%20Gold%20nya%20%F0%9F%98%8A"
-                  class="btn btn-purple mt-3">Pesan Sekarang</a>
+                <div class="price">Rp.50.000<span class="price-unit">/pcs</span></div>
+              </div>
+
+              <ul class="features">
+                <li>1 desain poster ukuran custom</li>
+                <li>Revisi 1x</li>
+                <li>File JPG / PNG</li>
+                <li>Estimasi 1 hari</li>
+              </ul>
+
+              <div class="card-footer">
+                <a href="https://wa.me/6283192124659?text=Halo%20saya%20ingin%20memesan%20Paket%20Basic%20Poster" class="btn btn-order">Pesan Sekarang</a>
               </div>
             </div>
-
-            <!-- STANDARD -->
-            <div class="carousel-item">
-              <div class="poster-card mx-2">
-                <img src="https://cdn-icons-png.flaticon.com/512/2583/2583314.png" width="55">
-                <h5>Paket Standard</h5>
-                <div class="poster-price">Rp.100.000</div>
-                <ul>
-                  <li>• 2 desain poster</li>
-                  <li>• Design premium</li>
-                  <li>• Revisi 2x</li>
-                  <li>• File JPG / PNG / PDF</li>
-                  <li>• Estimasi 1 hari</li>
-                </ul>
-                <a href="https://wa.me/6283192124659?text=Halo%20kak%20saya%20ingin%20memesan%20Jasa%20paketan%20Ayowebku%20Digital%20Growth%20untuk%20paket%20Gold%20nya%20%F0%9F%98%8A"
-                  class="btn btn-purple mt-3">Pesan Sekarang</a>
-              </div>
-            </div>
-
-            <!-- PREMIUM -->
-            <div class="carousel-item">
-              <div class="poster-card mx-2">
-                <img src="https://cdn-icons-png.flaticon.com/512/2583/2583323.png" width="55">
-                <h5>Paket Premium</h5>
-                <div class="poster-price">Rp.150.000</div>
-                <ul>
-                  <li>• 3 desain poster</li>
-                  <li>• Design eksklusif</li>
-                  <li>• Revisi hingga puas</li>
-                  <li>• File lengkap + source</li>
-                  <li>• Prioritas pengerjaan</li>
-                </ul>
-                <a href="https://wa.me/6283192124659?text=Halo%20kak%20saya%20ingin%20memesan%20Jasa%20desain%20poster%20untuk%20paket%20premium%20dong"
-                  class="btn btn-purple mt-3">Pesan Sekarang</a>
-              </div>
-            </div>
-
           </div>
 
-          <!-- Control Mobile -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#posterCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </button>
+          <div class="col-md-6 col-lg-4">
+            <div class="product-card highlight">
+              <div class="badge-recommended">Rekomendasi</div>
+              <div class="card-top">
+                <div class="card-icon" style="background: linear-gradient(135deg,#ffa6d4,#ff7bb0);">
+                  <img src="https://cdn-icons-png.flaticon.com/512/2583/2583314.png" alt="Standard" width="36">
+                </div>
+                <h5>Paket Standard</h5>
+                <div class="price">Rp.100.000<span class="price-unit">/pcs</span></div>
+              </div>
 
-          <button class="carousel-control-next" type="button" data-bs-target="#posterCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </button>
+              <ul class="features">
+                <li>2 desain poster</li>
+                <li>Design premium</li>
+                <li>Revisi 2x</li>
+                <li>File JPG / PNG / PDF</li>
+              </ul>
+
+              <div class="card-footer">
+                <a href="https://wa.me/6283192124659?text=Halo%20saya%20ingin%20memesan%20Paket%20Standard%20Poster" class="btn btn-order btn-order-light">Pesan Sekarang</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="product-card">
+              <div class="card-top">
+                <div class="card-icon" style="background: linear-gradient(135deg,#ffe59a,#ffd16a);">
+                  <img src="https://cdn-icons-png.flaticon.com/512/2583/2583323.png" alt="Premium" width="36">
+                </div>
+                <h5>Paket Premium</h5>
+                <div class="price">Rp.150.000<span class="price-unit">/pcs</span></div>
+              </div>
+
+              <ul class="features">
+                <li>3 desain poster</li>
+                <li>Design eksklusif</li>
+                <li>Revisi hingga puas</li>
+                <li>File lengkap + source</li>
+                <li>Prioritas pengerjaan</li>
+              </ul>
+
+              <div class="card-footer">
+                <a href="https://wa.me/6283192124659?text=Halo%20saya%20ingin%20memesan%20Paket%20Premium%20Poster" class="btn btn-order">Pesan Sekarang</a>
+              </div>
+            </div>
+          </div>
 
         </div>
 

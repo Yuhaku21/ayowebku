@@ -40,7 +40,13 @@ for (let i = 0; i < DOT_COUNT; i++) {
       clearInterval(loading);
 
       setTimeout(() => {
+        // smooth fade and then remove from DOM to avoid blocking clicks
         splash.classList.add("fade-out");
+        // wait for CSS transition then remove
+        setTimeout(() => {
+          try { splash.remove(); } catch (e) { /* ignore */ }
+          document.body.classList.add('loaded');
+        }, 900);
       }, 300);
     }
   }, 30); // ±3 detik
