@@ -499,3 +499,44 @@ body {
     transform: scale(1);
   }
 }
+
+/* Domain checker styles */
+.domain-checker .card {
+  border-radius: 12px;
+}
+.domain-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #f8f9fb;
+  margin-right: 8px;
+}
+.domain-available {
+  color: #0b8457;
+  font-weight: 600;
+}
+.domain-unavailable {
+  color: #d6333e;
+  font-weight: 600;
+}
+.domain-error {
+  color: #6c757d;
+}
+.domain-result-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* TLD label styles */
+.tld-label {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: #f1f3f5;
+  color: #343a40;
+  font-weight: 600;
+  border: 1px solid #e9ecef;
+}
