@@ -75,14 +75,51 @@ body {
   color: #3b2b5f;
 }
 
+/* =========================================
+   FIX HERO MOBILE - DEKAT DENGAN NAVBAR
+   ========================================= */
+
 @media (max-width: 768px) {
-  .ayosite-hero {
+
+  /* Hero jangan dibuat setinggi layar */
+  .hero {
+    height: auto !important;
+    min-height: auto !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
     padding-top: 5px !important;
+    padding-bottom: 20px !important;
   }
 
+  /* Naikkan isi hero */
   .hero-content {
-    margin-top: -50px !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    width: 100%;
+    max-width: 100%;
   }
+
+  /* Judul */
+  .hero-content h1 {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+    font-size: 2rem !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Deskripsi */
+  .hero-content p {
+    margin-top: 8px !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Tombol */
+  .hero-actions {
+    margin-top: 10px !important;
+  }
+
 }
 
 .feature-pill {
