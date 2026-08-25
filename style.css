@@ -461,7 +461,6 @@ body {
 }
 
 .product-card.modern-card .btn-order {
-  width: 100%;
   border-radius: 999px;
   padding: 12px 18px;
   font-weight: 700;
@@ -1449,6 +1448,72 @@ body {
   opacity: 0;
   transform: translateY(24px);
   animation: card-float-in 0.8s ease-out forwards;
+}
+
+/* Area fitur */
+.features-wrapper {
+  max-height: 180px;
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.7s ease;
+}
+
+/* Efek gradasi ketika masih tertutup */
+.features-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(transparent,
+      #fff);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Saat dibuka */
+.product-card.active .features-wrapper {
+  max-height: 1000px;
+}
+
+.product-card.active .features-wrapper::after {
+  opacity: 0;
+}
+
+/* Tombol selengkapnya */
+.btn-detail {
+  cursor: pointer;
+  border: 2px, #7C4585, solid;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.btn-detail:hover {
+  border: 2px solid #7C4585;
+  color: #7C4585;
+  background: rgba(124, 69, 133, 0.05);
+}
+
+/* Tombol pesan */
+.btn-pesan {
+  width: 100%;
+}
+
+/* Panah */
+.arrow {
+  display: inline-block;
+  margin-left: 6px;
+  transition: transform 0.4s ease;
+}
+
+.product-card.active .arrow {
+  transform: rotate(180deg);
+}
+
+/* Footer */
+.card-footer {
+  padding-top: 15px;
 }
 
 .product-cards .col-md-6:nth-child(1) .product-card {

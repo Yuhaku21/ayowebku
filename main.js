@@ -148,3 +148,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+ document.querySelectorAll('.btn-detail').forEach(button => {
+
+      button.addEventListener('click', function () {
+
+        const card = this.closest('.product-card');
+
+        card.classList.toggle('active');
+
+        if (card.classList.contains('active')) {
+
+          this.innerHTML = 'Tutup <span class="arrow">↑</span>';
+
+          setTimeout(() => {
+            card.scrollIntoView({
+              behavior: 'smooth',
+              block: 'center'
+            });
+          }, 150);
+
+        } else {
+
+          this.innerHTML = 'Selengkapnya <span class="arrow">↓</span>';
+
+          setTimeout(() => {
+            card.scrollIntoView({
+              behavior: 'smooth',
+              block: 'center'
+            });
+          }, 150);
+
+        }
+
+      });
+
+    });
