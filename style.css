@@ -37,7 +37,7 @@ body {
 /* HERO */
 .hero {
   position: relative;
-  height: 100vh;
+  height: 78vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -1317,6 +1317,10 @@ body {
 }
 
 /* Domain checker styles */
+.domain-checker {
+  margin-top: 1rem !important;
+}
+
 .domain-checker .card {
   border-radius: 12px;
   border: 2px solid #7C4585;
@@ -1444,124 +1448,507 @@ body {
   border: 2px solid #7C4585
 }
 
-.product-card {
-  opacity: 0;
-  transform: translateY(24px);
-  animation: card-float-in 0.8s ease-out forwards;
-}
-
-/* Area fitur */
-.features-wrapper {
-  max-height: 180px;
-  overflow: hidden;
-  position: relative;
-  transition: max-height 0.7s ease;
-}
-
-/* Efek gradasi ketika masih tertutup */
-.features-wrapper::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  background: linear-gradient(transparent,
-      #fff);
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-/* Saat dibuka */
-.product-card.active .features-wrapper {
-  max-height: 1000px;
-}
-
-.product-card.active .features-wrapper::after {
-  opacity: 0;
-}
-
-/* Tombol selengkapnya */
-.btn-detail {
-  cursor: pointer;
-  border: 2px, #7C4585, solid;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.btn-detail:hover {
-  border: 2px solid #7C4585;
-  color: #7C4585;
-  background: rgba(124, 69, 133, 0.05);
-}
-
-/* Tombol pesan */
-.btn-pesan {
-  width: 100%;
-}
-
-/* Panah */
-.arrow {
-  display: inline-block;
-  margin-left: 6px;
-  transition: transform 0.4s ease;
-}
-
-.product-card.active .arrow {
-  transform: rotate(180deg);
-}
-
-/* Footer */
-.card-footer {
-  padding-top: 15px;
-}
-
-.product-cards .col-md-6:nth-child(1) .product-card {
-  animation-delay: 0.12s;
-}
-
-.product-cards .col-md-6:nth-child(2) .product-card {
-  animation-delay: 0.24s;
-}
-
-.product-cards .col-md-6:nth-child(3) .product-card {
-  animation-delay: 0.36s;
-}
-
-.product-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 26px 44px rgba(115, 60, 160, 0.16);
-}
-
-@keyframes card-float-in {
-  0% {
-    opacity: 0;
-    transform: translateY(24px) scale(0.98);
+/*** Responsive adjustments for product cards */
+.pricing-section{
+    --plum-900:#4a1f47;
+    --plum-700:#6d2d68;
+    --plum-500:#8a3f83;
+    --bg-lavender:#e8d3ec;
+    --card-bg:#ffffff;
+    --ink:#241f2e;
+    --ink-soft:#6b6575;
+    --line:#efe4f0;
+    --gold-a:#ffd76a;
+    --gold-b:#ff9f43;
+    --silver-a:#cfe2ff;
+    --silver-b:#6fa9ff;
+    --bronze-a:#ffcf8e;
+    --bronze-b:#ff8a4c;
+    --radius:20px;
   }
 
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
+  *{ box-sizing:border-box; }
+
+  /* Semua style di bawah ini di-scope ke .pricing-section,
+     tidak menyentuh body/html supaya tidak bentrok dengan section lain. */
+
+  .pricing-section{
+    font-family:'Inter', sans-serif;
+    color:var(--ink);
   }
-}
 
-.product-card.highlight {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(115, 60, 160, 0.12)
-}
+  .pricing-section .eyebrow{
+    text-align:center;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-size:12px;
+    font-weight:600;
+    color:var(--plum-700);
+    margin-bottom:8px;
+  }
 
-/* Recommended badge */
-.badge-recommended {
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(90deg, #ffd966, #ffb347);
-  color: #2b2b2b;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-weight: 800;
-  font-size: 13px;
-  box-shadow: 0 8px 24px rgba(255, 169, 64, 0.18);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-}
+  .pricing-section h1.page-title{
+    text-align:center;
+    font-family:'Poppins', sans-serif;
+    font-weight:800;
+    font-size:clamp(28px, 4vw, 40px);
+    margin:0 0 44px;
+    color:var(--plum-900);
+  }
+
+  .pricing-section .container{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  @media (max-width:640px){
+    .pricing-section .container{
+      padding:0 16px;
+    }
+    .pricing-section h1.page-title{
+      margin-bottom:32px;
+    }
+    .pricing-section .product-card{
+      padding:40px 40px 36px;
+      border-radius:28px;
+    }
+    .pricing-section .card-top{
+      gap:18px;
+      margin-bottom:12px;
+    }
+    .pricing-section .card-icon{
+      width:68px;
+      height:68px;
+      border-radius:18px;
+      font-size:32px;
+    }
+    .pricing-section .card-top h5{
+      font-size:28px;
+    }
+    .pricing-section .price{
+      font-size:40px;
+      margin-top:12px;
+    }
+    .pricing-section .price-unit{
+      font-size:17px;
+    }
+    .pricing-section .divider{
+      margin:28px 0 18px;
+    }
+    .pricing-section .features li{
+      font-size:21px;
+      line-height:1.5;
+      padding:10px 0;
+    }
+    .pricing-section .features li.section-label{
+      font-size:18px;
+      padding-top:18px;
+    }
+    .pricing-section .features li.section-label:first-child{
+      padding-top:0;
+    }
+    .pricing-section .card-footer{
+      margin-top:26px;
+    }
+    .pricing-section .btn-detail{
+      padding:20px 18px;
+      border-radius:18px;
+      font-size:18px;
+    }
+  }
+
+  .pricing-section .pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr); /* desktop: 3 card sejajar ke samping */
+    gap:28px;
+    align-items:start;
+  }
+
+  /* Tablet: turunkan jadi 2 kolom biar tidak terlalu sempit */
+  @media (max-width:980px){
+    .pricing-section .pricing-grid{
+      grid-template-columns:repeat(2, 1fr);
+      max-width:720px;
+      margin:0 auto;
+    }
+  }
+
+  /* Mobile: card ditumpuk menurun ke bawah, 1 kolom penuh */
+  @media (max-width:640px){
+    .pricing-section .pricing-grid{
+      grid-template-columns:1fr;
+      max-width:480px;
+      margin:0 auto;
+    }
+  }
+
+  .pricing-section .product-card{
+    background:var(--card-bg);
+    border-radius:var(--radius);
+    padding:28px 26px 24px;
+    box-shadow:0 10px 30px -12px rgba(74,31,71,.28);
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    height:auto;
+    position:relative;
+    border:1px solid rgba(74,31,71,.05);
+  }
+
+  .pricing-section .product-card.featured{
+    border:2px solid var(--gold-b);
+    box-shadow:0 16px 40px -14px rgba(255,159,67,.45);
+  }
+
+  .pricing-section .featured-tag{
+    position:absolute;
+    top:-13px;
+    left:50%;
+    transform:translateX(-50%);
+    background:linear-gradient(135deg, var(--gold-a), var(--gold-b));
+    color:#4a2c00;
+    font-family:'Poppins', sans-serif;
+    font-weight:700;
+    font-size:11px;
+    letter-spacing:.06em;
+    padding:5px 14px;
+    border-radius:999px;
+    box-shadow:0 4px 10px -2px rgba(255,159,67,.6);
+  }
+
+  .pricing-section .card-top{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:6px;
+  }
+
+  .pricing-section .card-icon{
+    width:46px;
+    height:46px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    flex:0 0 auto;
+  }
+
+  .pricing-section .card-icon.bronze{ background:linear-gradient(135deg, var(--bronze-a), var(--bronze-b)); }
+  .pricing-section .card-icon.silver{ background:linear-gradient(135deg, var(--silver-a), var(--silver-b)); }
+  .pricing-section .card-icon.gold{   background:linear-gradient(135deg, var(--gold-a), var(--gold-b)); }
+
+  .pricing-section .card-top h5{
+    font-family:'Poppins', sans-serif;
+    font-weight:700;
+    font-size:19px;
+    margin:0;
+    flex:1 1 auto;
+    color:var(--plum-900);
+  }
+
+  .pricing-section .price{
+    width:100%;
+    font-family:'Poppins', sans-serif;
+    font-weight:800;
+    font-size:26px;
+    color:var(--ink);
+    margin-top:2px;
+  }
+
+  .pricing-section .price-unit{
+    font-family:'Inter', sans-serif;
+    font-weight:500;
+    font-size:13px;
+    color:var(--ink-soft);
+    margin-left:4px;
+  }
+
+  .pricing-section .divider{
+    height:1px;
+    background:var(--line);
+    margin:18px 0 14px;
+  }
+
+  /* ---- fitur ---- */
+  .pricing-section .features-wrapper{
+    overflow:hidden;
+    position:relative;
+    max-height:186px;
+    transition:max-height .45s cubic-bezier(.4,0,.2,1);
+  }
+
+  .pricing-section .features-wrapper::after{
+    content:"";
+    position:absolute;
+    left:0; right:0; bottom:0;
+    height:56px;
+    background:linear-gradient(transparent, var(--card-bg));
+    opacity:1;
+    transition:opacity .3s ease;
+    pointer-events:none;
+  }
+
+  .pricing-section .product-card.active .features-wrapper::after{
+    opacity:0;
+  }
+
+  .pricing-section .features{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+
+  .pricing-section .features li{
+    font-size:14.5px;
+    line-height:1.5;
+    color:#443f4d;
+    padding:6px 0;
+  }
+
+  .pricing-section .features li.section-label{
+    font-family:'Poppins', sans-serif;
+    font-weight:700;
+    font-size:13px;
+    color:var(--plum-700);
+    text-transform:uppercase;
+    letter-spacing:.03em;
+    padding-top:14px;
+  }
+
+  .pricing-section .features li.section-label:first-child{ padding-top:0; }
+
+  .pricing-section .features li.bonus{
+    margin-top:6px;
+    padding:10px 12px;
+    background:#fff6e8;
+    border-radius:10px;
+    color:#8a5a00;
+    font-weight:500;
+  }
+
+  .pricing-section .features li.locked{
+    color:#c3bcc9;
+  }
+
+  /* ---- tombol ---- */
+  .pricing-section .card-footer{
+    margin-top:20px;
+  }
+
+  .pricing-section .btn-detail{
+    width:100%;
+    border:none;
+    cursor:pointer;
+    padding:14px 18px;
+    border-radius:12px;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:14.5px;
+    color:#fff;
+    background:linear-gradient(135deg, var(--plum-700), var(--plum-900));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+
+  .pricing-section .btn-detail:hover{
+    transform:translateY(-1px);
+    box-shadow:0 8px 18px -6px rgba(74,31,71,.5);
+  }
+
+  .pricing-section .btn-detail:focus-visible{
+    outline:3px solid #d9b8e0;
+    outline-offset:2px;
+  }
+
+  .pricing-section .arrow{
+    display:inline-block;
+    transition:transform .3s ease;
+  }
+
+  .pricing-section .product-card.active .arrow{
+    transform:rotate(180deg);
+  }
+
+  .pricing-section .btn-order{
+    width:100%;
+    margin-top:10px;
+    border:none;
+    cursor:pointer;
+    padding:13px 18px;
+    border-radius:12px;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:14.5px;
+    background:#fff;
+    color:var(--plum-700);
+    border:1.5px solid var(--plum-700);
+    transition:background .15s ease, color .15s ease;
+  }
+
+  .pricing-section .btn-order:hover{
+    background:var(--plum-700);
+    color:#fff;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .pricing-section .features-wrapper,
+    .pricing-section .arrow,
+    .pricing-section .btn-detail{ transition:none; }
+  }
+
+  .card-jasa-design .product-card{
+    background:#fff;
+    border-radius:20px;
+    padding:28px 26px 24px;
+    height:auto;
+    box-shadow:0 10px 30px -12px rgba(74,31,71,.28);
+    justify-content:flex-start;
+    border:1px solid rgba(74,31,71,.05);
+  }
+
+  .card-jasa-design .product-cards{
+    align-items:flex-start;
+  }
+
+  .card-jasa-design .product-card .card-top{
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:6px;
+  }
+
+  .card-jasa-design .product-card .card-icon{
+    width:46px;
+    height:46px;
+    border-radius:14px;
+  }
+
+  .card-jasa-design .product-card h5{
+    font-family:'Poppins', sans-serif;
+    font-size:19px;
+    color:var(--plum-900);
+  }
+
+  .card-jasa-design .product-card .price{
+    width:100%;
+    margin:2px 0 0;
+    font-family:'Poppins', sans-serif;
+    font-size:26px;
+    color:var(--ink);
+  }
+
+  .card-jasa-design .product-card .price-unit{
+    font-family:'Inter', sans-serif;
+    font-size:13px;
+    margin-left:4px;
+  }
+
+  .card-jasa-design .product-card .features{
+    margin:0;
+    font-size:14.5px;
+    color:#443f4d;
+  }
+
+  .card-jasa-design .product-card .features li{
+    margin-bottom:0;
+    padding:6px 0;
+    line-height:1.5;
+  }
+
+  .card-jasa-design .product-card .card-footer{
+    width:100%;
+    margin-top:20px;
+  }
+
+  .card-jasa-design .product-card .btn-order{
+    width:100%;
+    display:block;
+    padding:14px 18px;
+    border-radius:12px;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:14.5px;
+    text-align:center;
+    color:#fff;
+    background:linear-gradient(135deg, #6d2d68, #4a1f47);
+    border:0;
+  }
+
+  .card-jasa-design .product-card .btn-order-light{
+    color:#6d2d68;
+    background:#fff;
+    border:1.5px solid #6d2d68;
+  }
+
+  .card-jasa-design .product-card.highlight{
+    border:2px solid #7c4585;
+    box-shadow:0 16px 40px -14px rgba(124,69,133,.35);
+  }
+
+  .card-jasa-design .badge-recommended{
+    position:absolute;
+    top:-13px;
+    left:50%;
+    transform:translateX(-50%);
+    padding:5px 14px;
+    border-radius:999px;
+    background:linear-gradient(135deg, #d9b8e0, #7c4585);
+    color:#fff;
+    font-family:'Poppins', sans-serif;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.06em;
+    white-space:nowrap;
+    box-shadow:0 4px 10px -2px rgba(124,69,133,.45);
+  }
+
+  @media (max-width:640px){
+    .card-jasa-design .product-card{
+      padding:40px 40px 36px;
+      border-radius:28px;
+    }
+
+    .card-jasa-design .product-card .card-top{
+      gap:18px;
+      margin-bottom:12px;
+    }
+
+    .card-jasa-design .product-card .card-icon{
+      width:68px;
+      height:68px;
+      border-radius:18px;
+    }
+
+    .card-jasa-design .product-card h5{
+      font-size:28px;
+    }
+
+    .card-jasa-design .product-card .price{
+      font-size:40px;
+      margin-top:12px;
+    }
+
+    .card-jasa-design .product-card .price-unit{
+      font-size:17px;
+    }
+
+    .card-jasa-design .product-card .features li{
+      font-size:21px;
+      padding:10px 0;
+    }
+
+    .card-jasa-design .product-card .card-footer{
+      margin-top:26px;
+    }
+
+    .card-jasa-design .product-card .btn-order{
+      padding:20px 18px;
+      border-radius:18px;
+      font-size:18px;
+    }
+  }

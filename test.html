@@ -3,235 +3,472 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portofolio Ayowebku</title>
-
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+<title>Paket Harga</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #f6f4fb;
-}
+  .pricing-section{
+    --plum-900:#4a1f47;
+    --plum-700:#6d2d68;
+    --plum-500:#8a3f83;
+    --bg-lavender:#e8d3ec;
+    --card-bg:#ffffff;
+    --ink:#241f2e;
+    --ink-soft:#6b6575;
+    --line:#efe4f0;
+    --gold-a:#ffd76a;
+    --gold-b:#ff9f43;
+    --silver-a:#cfe2ff;
+    --silver-b:#6fa9ff;
+    --bronze-a:#ffcf8e;
+    --bronze-b:#ff8a4c;
+    --radius:20px;
+  }
 
-/* NAVBAR */
-.navbar {
-    background: white;
-    border-radius: 20px;
-    padding: 15px 25px;
-    margin: 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
+  *{ box-sizing:border-box; }
 
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    position: relative;
-}
+  /* Semua style di bawah ini di-scope ke .pricing-section,
+     tidak menyentuh body/html supaya tidak bentrok dengan section lain. */
 
-.hero h1 {
-    font-size: 48px;
-    font-weight: 700;
-}
+  .pricing-section{
+    font-family:'Inter', sans-serif;
+    color:var(--ink);
+  }
 
-.text-purple {
-    color: #7b4ae2;
-}
+  .pricing-section .eyebrow{
+    text-align:center;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-size:12px;
+    font-weight:600;
+    color:var(--plum-700);
+    margin-bottom:8px;
+  }
 
-.hero p {
-    color: #777;
-}
+  .pricing-section h1.page-title{
+    text-align:center;
+    font-family:'Poppins', sans-serif;
+    font-weight:800;
+    font-size:clamp(28px, 4vw, 40px);
+    margin:0 0 44px;
+    color:var(--plum-900);
+  }
 
-.btn-purple {
-    background: #7b4ae2;
-    color: white;
-    border-radius: 12px;
-    padding: 12px 25px;
-}
+  .pricing-section .container{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 24px;
+  }
 
-.btn-outline-purple {
-    border: 2px solid #7b4ae2;
-    color: #7b4ae2;
-    border-radius: 12px;
-    padding: 12px 25px;
-}
+  @media (max-width:640px){
+    .pricing-section .container{
+      padding:0 16px;
+    }
+    .pricing-section h1.page-title{
+      margin-bottom:32px;
+    }
+    .pricing-section .product-card{
+      padding:24px 20px 20px;
+    }
+  }
 
-.btn-purple:hover {
-    background: #5f37c3;
-}
+  .pricing-section .pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr); /* desktop: 3 card sejajar ke samping */
+    gap:28px;
+    align-items:start;
+  }
 
-/* FLOATING DOT */
-.dot {
-    width: 10px;
-    height: 10px;
-    background: #c9b6ff;
-    border-radius: 50%;
-    position: absolute;
-    animation: float 6s infinite ease-in-out;
-}
+  /* Tablet: turunkan jadi 2 kolom biar tidak terlalu sempit */
+  @media (max-width:980px){
+    .pricing-section .pricing-grid{
+      grid-template-columns:repeat(2, 1fr);
+      max-width:720px;
+      margin:0 auto;
+    }
+  }
 
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0); }
-}
+  /* Mobile: card ditumpuk menurun ke bawah, 1 kolom penuh */
+  @media (max-width:640px){
+    .pricing-section .pricing-grid{
+      grid-template-columns:1fr;
+      max-width:480px;
+      margin:0 auto;
+    }
+  }
 
-/* PORTFOLIO */
-.portfolio {
-    padding: 80px 0;
-}
+  .pricing-section .product-card{
+    background:var(--card-bg);
+    border-radius:var(--radius);
+    padding:28px 26px 24px;
+    box-shadow:0 10px 30px -12px rgba(74,31,71,.28);
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    border:1px solid rgba(74,31,71,.05);
+  }
 
-.card-portfolio {
-    border: none;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: 0.3s;
-    background: white;
-}
+  .pricing-section .product-card.featured{
+    border:2px solid var(--gold-b);
+    box-shadow:0 16px 40px -14px rgba(255,159,67,.45);
+  }
 
-.card-portfolio img {
-    transition: 0.4s;
-}
+  .pricing-section .featured-tag{
+    position:absolute;
+    top:-13px;
+    left:50%;
+    transform:translateX(-50%);
+    background:linear-gradient(135deg, var(--gold-a), var(--gold-b));
+    color:#4a2c00;
+    font-family:'Poppins', sans-serif;
+    font-weight:700;
+    font-size:11px;
+    letter-spacing:.06em;
+    padding:5px 14px;
+    border-radius:999px;
+    box-shadow:0 4px 10px -2px rgba(255,159,67,.6);
+  }
 
-.card-portfolio:hover img {
-    transform: scale(1.1);
-}
+  .pricing-section .card-top{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:6px;
+  }
 
-.card-portfolio:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-}
+  .pricing-section .card-icon{
+    width:46px;
+    height:46px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    flex:0 0 auto;
+  }
 
-/* CTA */
-.cta {
-    background: #7b4ae2;
-    color: white;
-    padding: 60px 20px;
-    border-radius: 30px;
-    text-align: center;
-    margin: 50px 20px;
-}
+  .pricing-section .card-icon.bronze{ background:linear-gradient(135deg, var(--bronze-a), var(--bronze-b)); }
+  .pricing-section .card-icon.silver{ background:linear-gradient(135deg, var(--silver-a), var(--silver-b)); }
+  .pricing-section .card-icon.gold{   background:linear-gradient(135deg, var(--gold-a), var(--gold-b)); }
 
-/* FLOAT BUTTON */
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 50px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-}
+  .pricing-section .card-top h5{
+    font-family:'Poppins', sans-serif;
+    font-weight:700;
+    font-size:19px;
+    margin:0;
+    flex:1 1 auto;
+    color:var(--plum-900);
+  }
+
+  .pricing-section .price{
+    width:100%;
+    font-family:'Poppins', sans-serif;
+    font-weight:800;
+    font-size:26px;
+    color:var(--ink);
+    margin-top:2px;
+  }
+
+  .pricing-section .price-unit{
+    font-family:'Inter', sans-serif;
+    font-weight:500;
+    font-size:13px;
+    color:var(--ink-soft);
+    margin-left:4px;
+  }
+
+  .pricing-section .divider{
+    height:1px;
+    background:var(--line);
+    margin:18px 0 14px;
+  }
+
+  /* ---- fitur ---- */
+  .pricing-section .features-wrapper{
+    overflow:hidden;
+    position:relative;
+    max-height:186px;
+    transition:max-height .45s cubic-bezier(.4,0,.2,1);
+  }
+
+  .pricing-section .features-wrapper::after{
+    content:"";
+    position:absolute;
+    left:0; right:0; bottom:0;
+    height:56px;
+    background:linear-gradient(transparent, var(--card-bg));
+    opacity:1;
+    transition:opacity .3s ease;
+    pointer-events:none;
+  }
+
+  .pricing-section .product-card.active .features-wrapper::after{
+    opacity:0;
+  }
+
+  .pricing-section .features{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+
+  .pricing-section .features li{
+    font-size:14.5px;
+    line-height:1.5;
+    color:#443f4d;
+    padding:6px 0;
+  }
+
+  .pricing-section .features li.section-label{
+    font-family:'Poppins', sans-serif;
+    font-weight:700;
+    font-size:13px;
+    color:var(--plum-700);
+    text-transform:uppercase;
+    letter-spacing:.03em;
+    padding-top:14px;
+  }
+
+  .pricing-section .features li.section-label:first-child{ padding-top:0; }
+
+  .pricing-section .features li.bonus{
+    margin-top:6px;
+    padding:10px 12px;
+    background:#fff6e8;
+    border-radius:10px;
+    color:#8a5a00;
+    font-weight:500;
+  }
+
+  .pricing-section .features li.locked{
+    color:#c3bcc9;
+  }
+
+  /* ---- tombol ---- */
+  .pricing-section .card-footer{
+    margin-top:20px;
+  }
+
+  .pricing-section .btn-detail{
+    width:100%;
+    border:none;
+    cursor:pointer;
+    padding:14px 18px;
+    border-radius:12px;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:14.5px;
+    color:#fff;
+    background:linear-gradient(135deg, var(--plum-700), var(--plum-900));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+
+  .pricing-section .btn-detail:hover{
+    transform:translateY(-1px);
+    box-shadow:0 8px 18px -6px rgba(74,31,71,.5);
+  }
+
+  .pricing-section .btn-detail:focus-visible{
+    outline:3px solid #d9b8e0;
+    outline-offset:2px;
+  }
+
+  .pricing-section .arrow{
+    display:inline-block;
+    transition:transform .3s ease;
+  }
+
+  .pricing-section .product-card.active .arrow{
+    transform:rotate(180deg);
+  }
+
+  .pricing-section .btn-order{
+    width:100%;
+    margin-top:10px;
+    border:none;
+    cursor:pointer;
+    padding:13px 18px;
+    border-radius:12px;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:14.5px;
+    background:#fff;
+    color:var(--plum-700);
+    border:1.5px solid var(--plum-700);
+    transition:background .15s ease, color .15s ease;
+  }
+
+  .pricing-section .btn-order:hover{
+    background:var(--plum-700);
+    color:#fff;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .pricing-section .features-wrapper,
+    .pricing-section .arrow,
+    .pricing-section .btn-detail{ transition:none; }
+  }
 </style>
-
 </head>
-
 <body>
 
+<!-- Section Card Jasa Website -->
+<div class="card-jasa" style="background-color: rgba(134, 4, 134, 0.324); padding: 40px 0;">
+  <section class="pricing-section">
+    <div class="container">
 
+      <p class="eyebrow">Pilih sesuai kebutuhan bisnismu</p>
+      <h1 class="page-title">Paket Harga</h1>
 
-<!-- HERO -->
+      <div class="pricing-grid">
 
+  <!-- Paket Bronze -->
+  <div class="product-card">
+      <div class="card-top">
+        <div class="card-icon bronze">🥉</div>
+        <h5>Paket Bronze</h5>
+        <div class="price">Rp.550k<span class="price-unit">/tahun</span></div>
+      </div>
 
+      <div class="divider"></div>
 
-<!-- STATS SECTION -->
-<section class="py-5">
-<div class="container">
-    <div class="row text-center">
+      <div class="features-wrapper">
+        <ul class="features">
+          <li class="section-label">💻 Website</li>
+          <li>Website 1 halaman</li>
+          <li>Tampilan profesional & mobile friendly</li>
+          <li>Profil bisnis & produk/jasa</li>
+          <li>Tombol WhatsApp</li>
+          <li>Google Maps</li>
+          <li>Domain & hosting</li>
 
-        <div class="col-md-3">
-            <h2 class="fw-bold text-purple">150+</h2>
-            <p class="text-muted">Project Selesai</p>
-        </div>
+          <li class="section-label">📱 Sosial Media</li>
+          <li>3 desain konten/bulan</li>
+          <li>Caption konten</li>
+          <li>Jadwal posting</li>
+          <li>Optimasi bio Instagram</li>
+          <li class="bonus">🎁 BONUS: 1 desain banner promo</li>
+        </ul>
+      </div>
 
-        <div class="col-md-3">
-            <h2 class="fw-bold text-purple">120+</h2>
-            <p class="text-muted">Client Puas</p>
-        </div>
-
-        <div class="col-md-3">
-            <h2 class="fw-bold text-purple">3+</h2>
-            <p class="text-muted">Tahun Pengalaman</p>
-        </div>
-
-        <div class="col-md-3">
-            <h2 class="fw-bold text-purple">24/7</h2>
-            <p class="text-muted">Support</p>
-        </div>
-
-    </div>
-</div>
-</section>
-
-
-<!-- TESTIMONI -->
-<section class="py-5" style="background:#f6f4fb;">
-<div class="container">
-
-    <div class="text-center mb-5">
-        <h2 class="fw-bold">Apa Kata Client?</h2>
-    </div>
-
-    <div class="row g-4">
-
-        <div class="col-md-4">
-            <div class="testimonial-card p-4">
-                <p>"Website saya jadi lebih profesional dan banyak closing!"</p>
-                <h6 class="mt-3">- Andi, UMKM</h6>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="testimonial-card p-4">
-                <p>"Cepat, murah, dan hasilnya keren banget!"</p>
-                <h6 class="mt-3">- Sari, Owner Brand</h6>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="testimonial-card p-4">
-                <p>"Highly recommended untuk bisnis kecil!"</p>
-                <h6 class="mt-3">- Budi, Startup</h6>
-            </div>
-        </div>
-
+      <div class="card-footer">
+        <button type="button" class="btn-detail">Lihat Detail <span class="arrow">↓</span></button>
+      </div>
     </div>
 
-</div>
-</section>
+  <!-- Paket Silver -->
+  <div class="product-card">
+      <div class="card-top">
+        <div class="card-icon silver">🥈</div>
+        <h5>Paket Silver</h5>
+        <div class="price">Rp.850k<span class="price-unit">/tahun</span></div>
+      </div>
 
+      <div class="divider"></div>
 
-<!-- CTA -->
-<section class="py-5 text-center">
-<div class="container">
+      <div class="features-wrapper">
+        <ul class="features">
+          <li class="section-label">💻 Website</li>
+          <li>Website 3 halaman</li>
+          <li>Tampilan profesional & mobile friendly</li>
+          <li>Profil bisnis & produk/jasa</li>
+          <li class="locked">Tombol WhatsApp</li>
+          <li class="locked">Google Maps</li>
+          <li>Domain & hosting</li>
 
-    <div class="cta-box p-5">
-        <h2 class="fw-bold">Saatnya Bisnismu Go Digital 🚀</h2>
-        <p class="text-muted">Mulai dari 60rb kamu sudah punya website sendiri</p>
+          <li class="section-label">📱 Sosial Media</li>
+          <li>5 desain konten/bulan</li>
+          <li>Caption konten</li>
+          <li>Jadwal posting</li>
+          <li class="locked">Optimasi bio Instagram</li>
+          <li class="bonus">🎁 BONUS: 2 desain banner promo</li>
+        </ul>
+      </div>
 
-        <a href="#" class="btn btn-purple mt-3 me-2">Order Sekarang</a>
-        <a href="#" class="btn btn-outline-purple mt-3">Konsultasi Gratis</a>
+      <div class="card-footer">
+        <button type="button" class="btn-detail">Lihat Detail <span class="arrow">↓</span></button>
+      </div>
     </div>
 
-</div>
-</section>
+  <!-- Paket Gold -->
+  <div class="product-card featured">
+      <span class="featured-tag">Paling Laris</span>
+      <div class="card-top">
+        <div class="card-icon gold">🥇</div>
+        <h5>Paket Gold</h5>
+        <div class="price">Rp.1.350k<span class="price-unit">/tahun</span></div>
+      </div>
 
-<!-- CTA -->
-<section class="cta">
-    <h2>Siap Punya Website Keren?</h2>
-    <p>Gabung dengan ratusan client Ayowebku sekarang</p>
-    <a href="#" class="btn btn-light mt-3">Order Sekarang</a>
-</section>
+      <div class="divider"></div>
 
-<!-- FLOAT WA -->
-<div class="whatsapp">
-    💬 Hubungi Kami
-</div>
+      <div class="features-wrapper">
+        <ul class="features">
+          <li class="section-label">💻 Website</li>
+          <li>Website 5 halaman</li>
+          <li>Tampilan profesional & mobile friendly</li>
+          <li>Profil bisnis & produk/jasa</li>
+          <li>Tombol WhatsApp</li>
+          <li>Google Maps</li>
+          <li>Domain & hosting</li>
+
+          <li class="section-label">📱 Sosial Media</li>
+          <li>10 desain konten/bulan</li>
+          <li>Caption konten</li>
+          <li>Jadwal posting</li>
+          <li>Optimasi bio Instagram</li>
+          <li class="bonus">🎁 BONUS: 3 desain banner promo</li>
+        </ul>
+      </div>
+
+      <div class="card-footer">
+        <button type="button" class="btn-detail">Lihat Detail <span class="arrow">↓</span></button>
+      </div>
+    </div>
+
+      </div><!-- /.pricing-grid -->
+
+    </div><!-- /.container -->
+  </section>
+</div><!-- /.card-jasa -->
+
+<script>
+  document.querySelectorAll('.btn-detail').forEach(button => {
+    button.addEventListener('click', function () {
+      const card = this.closest('.product-card');
+      const wrapper = card.querySelector('.features-wrapper');
+      const list = wrapper.querySelector('.features');
+      const isOpening = !card.classList.contains('active');
+
+      card.classList.toggle('active');
+
+      if (isOpening) {
+        wrapper.style.maxHeight = list.scrollHeight + 'px';
+        this.innerHTML = 'Tutup <span class="arrow">↑</span>';
+      } else {
+        wrapper.style.maxHeight = '186px';
+        this.innerHTML = 'Lihat Detail <span class="arrow">↓</span>';
+      }
+
+      setTimeout(() => {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 200);
+    });
+  });
+
+  // recalc tinggi card aktif saat resize, biar tidak kepotong
+  window.addEventListener('resize', () => {
+    document.querySelectorAll('.product-card.active').forEach(card => {
+      const wrapper = card.querySelector('.features-wrapper');
+      const list = wrapper.querySelector('.features');
+      wrapper.style.maxHeight = list.scrollHeight + 'px';
+    });
+  });
+</script>
 
 </body>
 </html>

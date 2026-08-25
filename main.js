@@ -26,30 +26,30 @@ for (let i = 0; i < DOT_COUNT; i++) {
   dotsContainer.appendChild(dot);
 }
 
-  let progress = 0;
-  const splash = document.getElementById("splash");
-  const bar = document.getElementById("progressBar");
-  const text = document.getElementById("progressText");
+let progress = 0;
+const splash = document.getElementById("splash");
+const bar = document.getElementById("progressBar");
+const text = document.getElementById("progressText");
 
-  const loading = setInterval(() => {
-    progress++;
-    bar.style.width = progress + "%";
-    text.textContent = "Loading " + progress + "%";
+const loading = setInterval(() => {
+  progress++;
+  bar.style.width = progress + "%";
+  text.textContent = "Loading " + progress + "%";
 
-    if (progress >= 100) {
-      clearInterval(loading);
+  if (progress >= 100) {
+    clearInterval(loading);
 
+    setTimeout(() => {
+      // smooth fade and then remove from DOM to avoid blocking clicks
+      splash.classList.add("fade-out");
+      // wait for CSS transition then remove
       setTimeout(() => {
-        // smooth fade and then remove from DOM to avoid blocking clicks
-        splash.classList.add("fade-out");
-        // wait for CSS transition then remove
-        setTimeout(() => {
-          try { splash.remove(); } catch (e) { /* ignore */ }
-          document.body.classList.add('loaded');
-        }, 900);
-      }, 300);
-    }
-  }, 30); // ±3 detik
+        try { splash.remove(); } catch (e) { /* ignore */ }
+        document.body.classList.add('loaded');
+      }, 900);
+    }, 300);
+  }
+}, 30); // ±3 detik
 
 // --- Domain checker logic ---
 function rdapCheck(fqdn) {
@@ -149,38 +149,35 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
- document.querySelectorAll('.btn-detail').forEach(button => {
+// Card Logic
+document.querySelectorAll('.btn-detail').forEach(button => {
+    button.addEventListener('click', function () {
+      const card = this.closest('.product-card');
+      const wrapper = card.querySelector('.features-wrapper');
+      const list = wrapper.querySelector('.features');
+      const isOpening = !card.classList.contains('active');
 
-      button.addEventListener('click', function () {
+      card.classList.toggle('active');
 
-        const card = this.closest('.product-card');
+      if (isOpening) {
+        wrapper.style.maxHeight = list.scrollHeight + 'px';
+        this.innerHTML = 'Tutup <span class="arrow">↑</span>';
+      } else {
+        wrapper.style.maxHeight = '186px';
+        this.innerHTML = 'Lihat Detail <span class="arrow">↓</span>';
+      }
 
-        card.classList.toggle('active');
-
-        if (card.classList.contains('active')) {
-
-          this.innerHTML = 'Tutup <span class="arrow">↑</span>';
-
-          setTimeout(() => {
-            card.scrollIntoView({
-              behavior: 'smooth',
-              block: 'center'
-            });
-          }, 150);
-
-        } else {
-
-          this.innerHTML = 'Selengkapnya <span class="arrow">↓</span>';
-
-          setTimeout(() => {
-            card.scrollIntoView({
-              behavior: 'smooth',
-              block: 'center'
-            });
-          }, 150);
-
-        }
-
-      });
-
+      setTimeout(() => {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 200);
     });
+  });
+
+  // recalc tinggi card aktif saat resize, biar tidak kepotong
+  window.addEventListener('resize', () => {
+    document.querySelectorAll('.product-card.active').forEach(card => {
+      const wrapper = card.querySelector('.features-wrapper');
+      const list = wrapper.querySelector('.features');
+      wrapper.style.maxHeight = list.scrollHeight + 'px';
+    });
+  });
