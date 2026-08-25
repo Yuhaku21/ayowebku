@@ -1886,8 +1886,8 @@ body {
   }
 
   .card-jasa-design .product-card.highlight{
-    border:2px solid #7c4585;
-    box-shadow:0 16px 40px -14px rgba(124,69,133,.35);
+    border:2px solid #ff9f43;
+    box-shadow:0 16px 40px -14px rgba(255,159,67,.45);
   }
 
   .card-jasa-design .badge-recommended{
@@ -1897,58 +1897,58 @@ body {
     transform:translateX(-50%);
     padding:5px 14px;
     border-radius:999px;
-    background:linear-gradient(135deg, #d9b8e0, #7c4585);
-    color:#fff;
+    background:linear-gradient(135deg, #ffd76a, #ff9f43);
+    color:#4a2c00;
     font-family:'Poppins', sans-serif;
     font-size:11px;
     font-weight:700;
     letter-spacing:.06em;
     white-space:nowrap;
-    box-shadow:0 4px 10px -2px rgba(124,69,133,.45);
+    box-shadow:0 4px 10px -2px rgba(255,159,67,.6);
   }
 
   @media (max-width:640px){
     .card-jasa-design .product-card{
-      padding:40px 40px 36px;
-      border-radius:28px;
+      padding:28px 26px 24px;
+      border-radius:20px;
     }
 
     .card-jasa-design .product-card .card-top{
-      gap:18px;
-      margin-bottom:12px;
+      gap:12px;
+      margin-bottom:6px;
     }
 
     .card-jasa-design .product-card .card-icon{
-      width:68px;
-      height:68px;
-      border-radius:18px;
+      width:46px;
+      height:46px;
+      border-radius:14px;
     }
 
     .card-jasa-design .product-card h5{
-      font-size:28px;
+      font-size:19px;
     }
 
     .card-jasa-design .product-card .price{
-      font-size:40px;
-      margin-top:12px;
+      font-size:26px;
+      margin-top:2px;
     }
 
     .card-jasa-design .product-card .price-unit{
-      font-size:17px;
+      font-size:13px;
     }
 
     .card-jasa-design .product-card .features li{
-      font-size:21px;
-      padding:10px 0;
+      font-size:14.5px;
+      padding:6px 0;
     }
 
     .card-jasa-design .product-card .card-footer{
-      margin-top:26px;
+      margin-top:20px;
     }
 
     .card-jasa-design .product-card .btn-order{
-      padding:20px 18px;
-      border-radius:18px;
-      font-size:18px;
+      padding:14px 18px;
+      border-radius:12px;
+      font-size:14.5px;
     }
   }
