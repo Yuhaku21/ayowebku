@@ -7,8 +7,31 @@
 
 body {
   background: #ffffff;
-   overflow-x: hidden;
+  overflow-x: hidden;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: clip !important;
+  }
+
+  .hero,
+  .ayosite-hero,
+  main,
+  section,
+  footer,
+  nav {
+    overflow-x: clip !important;
+  }
+
+  #dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+  }
 }
 
 /* HERO */
