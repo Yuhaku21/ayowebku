@@ -37,28 +37,29 @@ body {
 /* HERO */
 .hero {
   position: relative;
-  height: 62vh;
+  min-height: 650px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(135deg, #ffffff 0%, #fbf8ff 58%, #f0e6f8 100%);
 }
 
 /* TEXT */
 .hero-content {
-  margin-top: 0;
   position: relative;
   z-index: 2;
-  text-align: left;
-  max-width: 900px;
-  padding: 20px;
+  max-width: 660px;
+  padding: 36px 0;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #1f1f1f;
-  line-height: 1.1;
+  margin: 16px 0 20px;
+  color: #241632;
+  font-size: clamp(2.7rem, 5vw, 4.7rem);
+  font-weight: 800;
+  letter-spacing: -.04em;
+  line-height: 1.04;
 }
 
 .ayosite-hero {
@@ -83,13 +84,12 @@ body {
 
   /* Hero jangan dibuat setinggi layar */
   .hero {
-    height: auto !important;
+    min-height: auto !important;
     min-height: auto !important;
     display: flex !important;
     align-items: flex-start !important;
     justify-content: center !important;
-    padding-top: 50px !important;
-    padding-bottom: 20px !important;
+    padding: 42px 0 52px !important;
   }
 
   /* Naikkan isi hero */
@@ -99,13 +99,14 @@ body {
     padding-bottom: 0 !important;
     width: 100%;
     max-width: 100%;
+    text-align: left;
   }
 
   /* Judul */
   .hero-content h1 {
     margin-top: 0 !important;
     margin-bottom: 10px !important;
-    font-size: 2rem !important;
+    font-size: clamp(2.35rem, 11vw, 3.4rem) !important;
     line-height: 1.1 !important;
   }
 
@@ -500,9 +501,25 @@ body {
 }
 
 .hero-content p {
-  margin-top: 12px;
-  color: #666;
+  max-width: 600px;
+  margin: 0;
+  color: #665b70;
+  font-size: 1.04rem;
+  line-height: 1.8;
 }
+
+.hero-layout { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(360px, .8fr); align-items: center; gap: 68px; }
+.hero-eyebrow { display: inline-block; color: #7C4585 !important; font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.hero-content h1 span { color: #7C4585; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 20px; }
+.hero-actions .btn { border-radius: 10px; font-weight: 700; }
+.hero-trust { display: flex; flex-wrap: wrap; gap: 14px; color: #746a7e; font-size: .78rem; }
+.hero-trust i { margin-right: 4px; color: #7C4585; }
+.hero-technology { display: flex; align-items: center; gap: 12px; margin-top: 34px; color: #958c9d; font-size: .72rem; }.hero-technology img { width: 150px; height: 30px; object-fit: contain; mix-blend-mode: multiply; opacity: .7; }
+.hero-showcase { position: relative; min-height: 440px; display: grid; place-items: center; }.showcase-glow { position: absolute; width: 330px; height: 330px; border-radius: 50%; background: rgba(124,69,133,.2); filter: blur(46px); }.showcase-window { position: relative; width: min(100%, 430px); padding: 12px; border: 1px solid rgba(124,69,133,.16); border-radius: 22px; background: rgba(255,255,255,.85); box-shadow: 0 24px 65px rgba(66,31,89,.16); transform: rotate(3deg); }.showcase-bar { display: flex; align-items: center; gap: 6px; padding: 5px 7px 14px; border-bottom: 1px solid #eee6f2; color: #a49ba9; }.showcase-bar span { width: 8px; height: 8px; border-radius: 50%; background: #d9c4e1; }.showcase-bar small { margin-left: 9px; font-size: .62rem; }.showcase-screen { min-height: 350px; padding: 20px; border-radius: 14px; background: linear-gradient(145deg, #371b5d, #8b53b1); color: #fff; }.showcase-mini-nav { display: flex; align-items: center; justify-content: space-between; font-size: .7rem; }.showcase-mini-nav b { font-size: .95rem; }.showcase-mini-nav span { margin-left: auto; margin-right: 13px; opacity: .65; }.showcase-mini-nav i { font-size: 1rem; }.showcase-copy { padding: 64px 12px 35px; }.showcase-copy small { font-size: .58rem; font-weight: 700; letter-spacing: .12em; opacity: .75; }.showcase-copy strong { display: block; margin-top: 13px; font-size: 2.1rem; line-height: 1.08; }.showcase-copy p { margin: 13px 0 18px; color: rgba(255,255,255,.75); font-size: .76rem; }.showcase-copy button { border: 0; border-radius: 7px; padding: 9px 12px; background: #fff; color: #66377d; font-size: .72rem; font-weight: 700; }.showcase-metrics { display: flex; gap: 10px; }.showcase-metrics div { flex: 1; padding: 11px 12px; border: 1px solid rgba(255,255,255,.15); border-radius: 10px; background: rgba(255,255,255,.1); }.showcase-metrics b, .showcase-metrics small { display: block; }.showcase-metrics b { font-size: 1rem; }.showcase-metrics small { margin-top: 3px; color: rgba(255,255,255,.66); font-size: .62rem; }.showcase-float { position: absolute; right: -8px; bottom: 30px; display: flex; align-items: center; gap: 10px; padding: 12px 15px; border: 1px solid #eee4f4; border-radius: 12px; background: #fff; box-shadow: 0 14px 28px rgba(47,24,66,.13); color: #33243f; transform: rotate(-3deg); }.showcase-float i { color: #7C4585; font-size: 1.35rem; }.showcase-float b, .showcase-float small { display: block; }.showcase-float b { font-size: .76rem; }.showcase-float small { margin-top: 2px; color: #8a8090; font-size: .64rem; }
+
+@media (max-width: 992px) { .hero-layout { grid-template-columns: 1fr; gap: 25px; }.hero-content { max-width: 760px; margin: auto; text-align: center; }.hero-content p { margin: auto; }.hero-actions, .hero-trust, .hero-technology { justify-content: center; }.hero-showcase { min-height: 390px; }.showcase-window { max-width: 440px; } }
+@media (max-width: 576px) { .hero-layout { padding: 0 10px; }.hero-content h1 { letter-spacing: -.03em; }.hero-content p { font-size: .95rem; line-height: 1.7; }.hero-actions { flex-direction: column; align-items: stretch; }.hero-actions .btn { width: 100%; }.hero-trust { flex-direction: column; gap: 7px; align-items: center; }.hero-technology { flex-direction: column; gap: 5px; margin-top: 27px; }.hero-showcase { min-height: 330px; }.showcase-window { transform: none; }.showcase-screen { min-height: 285px; }.showcase-copy { padding: 42px 4px 25px; }.showcase-copy strong { font-size: 1.72rem; }.showcase-float { right: 0; bottom: 4px; }.showcase-glow { width: 250px; height: 250px; } }
 
 /* DOT CONTAINER */
 #dots {
