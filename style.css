@@ -3025,3 +3025,39 @@ body {
       font-size:14.5px;
     }
   }
+
+/* Ayosite landing page content */
+.ayosite-legacy-content { display: none; }
+.ayosite-main { color: #27202f; background: #ffff; }
+.ayosite-main-hero { padding: 88px 0 74px; background: linear-gradient(135deg, #ffffff 0%, #fff 55%, #f3eaff 100%); overflow: hidden; }
+.ayosite-main-hero h1 { max-width: 720px; margin: 18px 0; color: #271b38; font-size: clamp(2.3rem, 5vw, 4.5rem); font-weight: 800; line-height: 1.04; }
+.ayosite-main-hero .lead { max-width: 650px; color: #62586e; font-size: 1.08rem; line-height: 1.8; }
+.ayosite-eyebrow { display: inline-block; color: #7c4585; font-size: .76rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.ayosite-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0; }
+.ayosite-actions .btn, .ayosite-cta .btn { border-radius: 10px; padding: 13px 20px; font-weight: 700; }
+.ayosite-trust { display: flex; flex-wrap: wrap; gap: 16px; color: #6d6479; font-size: .82rem; }
+.ayosite-trust i { margin-right: 4px; color: #7c4585; }
+.landing-preview { position: relative; max-width: 440px; margin: auto; padding: 14px; border: 1px solid rgba(124,69,133,.16); border-radius: 24px; background: #fff; box-shadow: 0 25px 70px rgba(72,36,101,.15); transform: rotate(2deg); }
+.preview-browser { display: flex; align-items: center; gap: 6px; padding: 5px 8px 14px; border-bottom: 1px solid #eee8f4; color: #988e9f; }
+.preview-browser span { width: 7px; height: 7px; border-radius: 50%; background: #d8c2e1; }.preview-browser small { margin-left: 8px; font-size: .62rem; }
+.preview-content { padding: 33px 27px 28px; border-radius: 16px; background: linear-gradient(145deg, #3b1e62, #8951af); color: #fff; }
+.preview-label { margin-bottom: 13px; font-size: .62rem; font-weight: 700; letter-spacing: .1em; opacity: .75; }.preview-content strong { display: block; font-size: 1.7rem; line-height: 1.12; }.preview-content p { margin: 13px 0 20px; color: rgba(255,255,255,.78); font-size: .8rem; line-height: 1.6; }
+.preview-button { display: inline-block; padding: 9px 13px; border-radius: 7px; background: #fff; color: #6c398d; font-size: .74rem; font-weight: 700; }.preview-lines { display: flex; gap: 6px; margin-top: 27px; }.preview-lines span { height: 5px; border-radius: 4px; background: rgba(255,255,255,.3); }.preview-lines span:first-child { width: 48%; }.preview-lines span:nth-child(2) { width: 25%; }.preview-lines span:last-child { width: 12%; }
+.preview-result { display: flex; align-items: center; gap: 10px; width: max-content; max-width: 90%; margin: -13px 0 0 -25px; padding: 11px 14px; border: 1px solid #eee4f5; border-radius: 12px; background: #fff; box-shadow: 0 12px 28px rgba(50,25,70,.12); color: #32253d; transform: rotate(-2deg); }.preview-result i { color: #7c4585; font-size: 1.4rem; }.preview-result strong, .preview-result small { display: block; }.preview-result strong { font-size: .76rem; }.preview-result small { margin-top: 3px; color: #8e8494; font-size: .65rem; }
+.ayosite-proof { padding: 25px 0; border-bottom: 1px solid #eee8f4; background: #fff; }.ayosite-proof .col-6 { padding: 12px 24px; border-right: 1px solid #eee8f4; }.ayosite-proof strong, .ayosite-proof span { display: block; }.ayosite-proof strong { color: #7c4585; font-size: 1.1rem; }.ayosite-proof span { margin-top: 3px; color: #766d7e; font-size: .8rem; }
+.ayosite-section, .ayosite-faq { padding: 92px 0; }.ayosite-heading { max-width: 680px; margin-bottom: 42px; }.ayosite-heading h2 { margin: 10px 0 12px; color: #2f2240; font-size: clamp(1.9rem, 3vw, 2.8rem); font-weight: 800; line-height: 1.12; }.ayosite-heading p { color: #756b80; line-height: 1.75; }
+.benefit-card { height: 100%; padding: 27px; border: 1px solid #eee4f4; border-radius: 15px; background: #fff; box-shadow: 0 10px 35px rgba(58,29,80,.06); }.benefit-icon { display: grid; place-items: center; width: 45px; height: 45px; margin-bottom: 20px; border-radius: 12px; background: #f1e5f8; color: #7c4585; font-size: 1.25rem; }.benefit-card h3, .process-step h3, .ayosite-price-card h3 { color: #33243f; font-size: 1.14rem; font-weight: 700; }.benefit-card p, .process-step p, .ayosite-price-card p { color: #746a7e; font-size: .9rem; line-height: 1.7; }
+.ayosite-process { background: #faf8fc; }.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }.process-step { position: relative; padding-top: 20px; border-top: 2px solid #d8bce4; }.process-step b { color: #7c4585; font-size: .8rem; letter-spacing: .08em; }
+.ayosite-pricing { padding: 92px 0; background: rgba(134,4,134,.08); }.ayosite-price-card { height: 100%; padding: 29px; border: 1px solid #e8dcef; border-radius: 16px; background: #fff; box-shadow: 0 10px 30px rgba(72,36,101,.06); }.ayosite-price-card.is-featured { border: 2px solid #7c4585; box-shadow: 0 18px 40px rgba(94,43,119,.16); transform: translateY(-10px); }.price-tag { display: inline-block; margin-bottom: 18px; color: #7c4585; font-size: .74rem; font-weight: 800; text-transform: uppercase; }.price-number { display: block; margin: 20px 0; color: #2f2240; font-size: 2.3rem; }.ayosite-price-card ul { min-height: 145px; margin: 0 0 24px; padding: 0; list-style: none; }.ayosite-price-card li { margin-bottom: 12px; color: #665c70; font-size: .88rem; }.ayosite-price-card li i { margin-right: 7px; color: #7c4585; }
+.faq-list { max-width: 800px; }.faq-list details { padding: 19px 0; border-bottom: 1px solid #e8deed; }.faq-list summary { cursor: pointer; color: #34253f; font-weight: 700; }.faq-list p { max-width: 680px; margin: 13px 0 0; color: #746a7e; font-size: .9rem; line-height: 1.7; }
+.ayosite-cta { padding: 58px 0; background: linear-gradient(120deg, #3b1e62, #8951af); color: #fff; }.ayosite-cta .container { display: flex; align-items: center; justify-content: space-between; gap: 25px; }.ayosite-cta .ayosite-eyebrow { color: #e8d5f0; }.ayosite-cta h2 { margin: 10px 0; font-size: clamp(1.7rem, 3vw, 2.5rem); }.ayosite-cta p { margin: 0; color: rgba(255,255,255,.78); }
+@media (max-width: 767px) { .ayosite-main-hero { padding: 55px 0 50px; }.ayosite-main-hero h1 { font-size: 2.4rem; }.landing-preview { margin-top: 12px; transform: none; }.ayosite-trust { flex-direction: column; gap: 8px; }.ayosite-proof .col-6:nth-child(2) { border-right: 0; }.ayosite-proof .col-6:nth-child(-n+2) { border-bottom: 1px solid #eee8f4; }.ayosite-section, .ayosite-faq, .ayosite-pricing { padding: 64px 0; }.process-grid { grid-template-columns: 1fr 1fr; gap: 24px 15px; }.ayosite-price-card.is-featured { transform: none; }.ayosite-cta .container { align-items: flex-start; flex-direction: column; } }
+
+.ayosite-company-pricing { padding: 56px 0 70px; background: #fff; }
+.ayosite-company-pricing .pricing-section { padding: 0; }
+.ayosite-company-pricing .pricing-section .container { max-width: 1240px; }
+.ayosite-company-pricing .pricing-section .page-title { margin-bottom: 44px; }
+@media (max-width: 640px) {
+  .ayosite-company-pricing { padding: 48px 0 58px; }
+  .ayosite-company-pricing .pricing-section .product-card { padding: 40px 40px 36px; }
+}
