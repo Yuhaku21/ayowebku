@@ -778,9 +778,48 @@
       </div>
     </div>
   </footer>
-  <a href="https://aiservice-phi.vercel.app/" class="whatsapp-float-text" target="_blank">
-    Tanya AI <i class="bi bi-robot ms-2"></i>
-  </a>
+  <button type="button" class="whatsapp-float-text" data-bs-toggle="modal" data-bs-target="#contactChatModal">
+    Hubungi kami <i class="bi bi-chat-dots ms-2"></i>
+  </button>
+
+  <div class="modal fade contact-chat-modal" id="contactChatModal" tabindex="-1" data-bs-backdrop="false"
+    aria-labelledby="contactChatModalLabel" aria-hidden="true">
+    <div class="modal-dialog contact-chat-dialog">
+      <div class="modal-content contact-chat-content">
+        <div class="contact-chat-header">
+          <div class="contact-chat-avatar" aria-hidden="true"><i class="bi bi-chat-heart-fill"></i></div>
+          <div class="contact-chat-agent">
+            <h2 id="contactChatModalLabel">Ayowebku</h2>
+            <span><i class="contact-chat-status" aria-hidden="true"></i> Biasanya membalas dengan cepat</span>
+          </div>
+          <button type="button" class="contact-chat-close" data-bs-dismiss="modal" aria-label="Tutup chat">
+            <i class="bi bi-x-lg" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="contact-chat-body">
+          <div class="contact-chat-divider">Percakapan baru</div>
+          <div class="contact-chat-message">
+            <p>Halo! 👋 Selamat datang di Ayowebku.</p>
+            <p>Ada yang bisa kami bantu hari ini?</p>
+            <small>Ayowebku · sekarang</small>
+          </div>
+          <form class="contact-chat-form" action="https://wa.me/6283192124659" method="get" target="_blank"
+            rel="noopener noreferrer">
+            <label class="visually-hidden" for="contactChatMessage">Tulis pesan Anda</label>
+            <textarea id="contactChatMessage" name="text" rows="4" required
+              placeholder="Tulis pesan Anda..."></textarea>
+            <div class="contact-chat-form-footer">
+              <span>Pesan Anda akan dibuka di WhatsApp</span>
+              <button type="submit" class="contact-chat-send">
+                <i class="bi bi-send" aria-hidden="true"></i> Kirim pesan
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
